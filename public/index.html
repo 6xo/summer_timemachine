@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>夏のタイムマシン</title>
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css"al>
+  <link rel='stylesheet' href='/main.css'>
+</head>
+
+<body>
+<div class="main">
+	<div class="container">
+		<h1>夏のタイムマシン</h1>
+		<p>あの夏あなたは何をしてましたか？</p>
+		<form name="form">
+			twitterID : <input id="text" type="text" name="username" value="@">
+		<select id="old" name="old">
+			<option value="0">何年前</option>
+			<option value="1">1</option>
+      <option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+			<option value="8">8</option>
+		</select>
+		<button type="button" onclick="go()" class="">あの夏へ行く</button>
+	</form>
+  </div>
+  <div class='sub'>
+	<p><b>あの夏</b>の思い出はあなただけのものです</p><p>あの日のつぶやきから<b>あの夏</b>を思い出しませんか</p><p>余裕があれば声をかけてあげましょう</p><p><b>あの夏</b>のあなたに</p>
+  </div>
+</div>
+
+<script>
+function go(){
+  var str1 = document.form.username.value;
+  var str2 = document.form.old.value;
+  var year = 2014 - str2;
+  var url = "https://twitter.com/search?f=realtime&q=";
+  url += "from%3A" + str1.substr(1)+"%20since%3A"+year+"-07-20%20until%3A"+year+"-08-31";
+  location.href = url;
+}
+</script>
+
+</body>
+</html>
+
