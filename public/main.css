@@ -10,4 +10,17 @@
   text-align:center;
 }
 
+#text {
+  padding: 0.1em 0.1em;
+}
+
+#old {
+  padding: 0.1em 0.1em;
+  font-size: 70%;
+}
+
+.button {
+  padding: 0.3em 0.3em;
+  font-size: 70%;
+}
 
